@@ -1,0 +1,3 @@
+[submodule "section03_Pipeline/gitlab-subrepo"]
+	path = section03_Pipeline/gitlab-subrepo
+	url = git@gitlab.com:udemy7523451/my-first-project.git
