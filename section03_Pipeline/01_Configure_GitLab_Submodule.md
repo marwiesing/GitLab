@@ -110,20 +110,40 @@ Submodules allow you to include one Git repository as a subdirectory in another.
 
 To add another GitLab repository as a submodule in the same GitHub repository:
 
-1. **Repeat the Submodule Addition Steps**
+1. **Navigate to your repository's root directory**:
+   ```bash
+   cd ~/udemy/gitlab
+   ```
 
+2. **Repeat the Submodule Addition Steps**
+   Use the `git submodule add` command with the desired path.
    ```bash
    git submodule add git@gitlab.com:your-gitlab-username/another-repo.git path/to/another-submodule
    ```
 
-2. **Initialize and Update the New Submodule**
-
+3. **Initialize and Update the New Submodule**
+   After adding, ensure the submodule is initialized and updated.
    ```bash
    git submodule update --init --recursive
    ```
 
-3. **Commit the New Submodule Changes**
+4. **Verify the `.gitmodules` file**:
+   Check that the new submodule has been added to `.gitmodules`.
+   ```bash
+   cat .gitmodules
+   ```
+   It should look like this:
+   ```plaintext
+   [submodule "section03_Pipeline/gitlab-subrepo"]
+       path = section03_Pipeline/gitlab-subrepo
+       url = git@gitlab.com:udemy7523451/my-first-project.git
+   [submodule "section04_Artifacts/artifacts_demo"]
+       path = section04_Artifacts/artifacts_demo
+       url = git@gitlab.com:udemy7523451/artifacts_demo.git
+   ```
 
+5. **Commit the New Submodule Changes**
+   Add and commit the updated `.gitmodules` and any submodule-related changes.
    ```bash
    git add .gitmodules path/to/another-submodule
    git commit -m "Added another GitLab repository as submodule"
