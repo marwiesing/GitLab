@@ -7,3 +7,6 @@
 [submodule "section06_Local_Runners/local-runners"]
 	path = section06_Local_Runners/local-runners
 	url = git@gitlab.com:udemy7523451/runners-project.git
+[submodule "section07_Variables/Variables_Demo"]
+	path = section07_Variables/Variables_Demo
+	url = git@gitlab.com:udemy7523451/variables_demo.git
